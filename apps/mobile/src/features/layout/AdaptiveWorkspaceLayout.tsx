@@ -464,8 +464,8 @@ function AdaptiveWorkspaceLayoutContent(
   const sidebarCommands = primarySidebarPinned ? [] : (["toggleSidebar"] as const);
   useHardwareKeyboardCommand(sidebarCommands, handleToggleSidebarCommand);
   const showInspector = () => {
+    setFileInspectorPreferredVisible(true);
     if (fileInspector.supported) {
-      setFileInspectorPreferredVisible(true);
       setInspectorSheetRoute(null);
       return;
     }
